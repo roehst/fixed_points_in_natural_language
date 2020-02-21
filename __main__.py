@@ -2,22 +2,32 @@ import sys
 
 from googletrans import Translator
 
+cycle = [
+    "pt",
+    "en",
+    "de"
+]
+
 t = Translator()
 
 sentence = sys.argv[1]
 
 print(sentence)
 
-for _ in range(10):
+j = 0
+
+for i in range(10):
 
     initial = sentence
 
-    sentence = t.translate(text=sentence, src="pt", dest="en").text
-    print(sentence)
-    sentence = t.translate(text=sentence, src="en", dest="pt").text
+    for (a, b) in zip(cycle, cycle[1:]):
+        sentence = t.translate(text=sentence, src=a, dest=b).text
+        j+=1
+        print(j, sentence)
+    sentence = t.translate(text=sentence, src=b, dest="pt").text
+    j+=1
+    print(j, sentence)
 
     if sentence == initial:
         print("Fixed point!")
         break
-    
-    print(sentence)
