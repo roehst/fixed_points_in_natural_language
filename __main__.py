@@ -5,7 +5,11 @@ from googletrans import Translator
 cycle = [
     "pt",
     "en",
-    "de"
+    "de",
+    "fr",
+    "it",
+    "zh-cn",
+    "pt"
 ]
 
 t = Translator()
@@ -24,10 +28,7 @@ for i in range(10):
         sentence = t.translate(text=sentence, src=a, dest=b).text
         j+=1
         print(j, sentence)
-    sentence = t.translate(text=sentence, src=b, dest="pt").text
-    j+=1
-    print(j, sentence)
 
-    if sentence == initial:
-        print("Fixed point!")
-        break
+        if sentence == initial:
+            print("Fixed point!")
+            sys.exit(0)
