@@ -6,6 +6,7 @@ You'll need to install the googletrans library.
 
 An example will make it clear.
 
+```
 Esta é uma ferramenta de tradução com ponto fixos.
 1 This is a translation tool with fixed point.
 2 Dies ist ein Übersetzungs-Tool mit festen Punkt.
@@ -26,6 +27,7 @@ Esta é uma ferramenta de tradução com ponto fixos.
 17 这是翻译工具的固定点。
 18 Esta é uma ferramenta de tradução de ponto fixo. <<<<<<<<<
 Fixed point!
+```
 
 # How to change the languages the tool cycles over?
 
@@ -49,6 +51,7 @@ cycle = [
 
 # Can you find long cycles?
 
+```
 Eu adoro cerveja, mas nao gosto de batata
 1 I love beer, but not potato taste
 2 Ich liebe Bier, aber nicht Kartoffelgeschmack
@@ -93,3 +96,4 @@ Eu adoro cerveja, mas nao gosto de batata
 41 土豆，我喜欢啤酒，但不
 42 Batatas, eu gosto de cerveja, mas não
 Fixed point!
+```
